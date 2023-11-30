@@ -2,35 +2,31 @@
 % Andrew Zimolzak, MD, MMSc
 % December 5, 2023
 
----
-toc: true
-toc-title: Table of contents
-...
+## Outline
 
-## Getting up
+1. Intro
+2. Example studies
+3. EHR data pros/cons
+4. Wrap up
 
-- Turn off alarm
-- Get out of bed
 
-## Breakfast
+## About me
 
-- Eat eggs
-- Drink coffee
+Research   Clinical
+---------  ----------
+This is    just a te
 
-# This slide separates things
 
-## Dinner
 
-- Eat spaghetti
-- Drink wine
 
-## Slide
+# Example studies
 
-What happens when there is no bullet?
+## Patrick
 
-## Title again
+About the study.[^pom]
 
-Shannon entropy is like $S = \sum_i -log ((p_i)(1 - p_i))$, but that
-is like from memory and I think I got it wrong.
+[^pom]: Patrick study *ref*
 
-- Probably should memorize.
+## Kao
+
+end
