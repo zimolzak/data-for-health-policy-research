@@ -182,11 +182,9 @@ tk
 
 
 
-# Sheehan
+# Sheehan[^she]
 
-## slide
-
-Sheehan SE, Safdar N, Singh H, *et al.* Detection and Remediation of Misidentification Errors in Radiology Examination Ordering. *Appl Clin Inform.* 2020;11(1):7--87. <https://pubmed.ncbi.nlm.nih.gov/31995835/>
+[^she]: Sheehan SE, Safdar N, Singh H, *et al.* Detection and Remediation of Misidentification Errors in Radiology Examination Ordering. *Appl Clin Inform.* 2020;11(1):7--87. <https://pubmed.ncbi.nlm.nih.gov/31995835/>
 
 
 
@@ -289,3 +287,10 @@ tk
 Slides on github
 
 CCommons
+
+
+
+## TK
+
+- aspect ratio
+- include benefits of EHR
