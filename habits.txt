@@ -12,12 +12,11 @@
 
 ## About me
 
-Research   Clinical
----------  ----------
-This is    just a te
+|Table | Again |
+|:-----|:------|
+| 123 |  456 |
 
-
-
+: caption
 
 # Example studies
 
