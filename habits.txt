@@ -2,12 +2,17 @@
 % Andrew Zimolzak, MD, MMSc
 % December 5, 2023
 
+
+
+
 ## Outline
 
 1. Intro
 2. Example studies
 3. EHR data pros/cons
 4. Wrap up
+
+
 
 
 ## About me
@@ -19,8 +24,17 @@
 | Veterans Affairs Boston:  | Hospitalist |
 | VA Health services research | Hospitalist |
 
+What is *Clinical research informatics?*
+
+- I make various clinical research studies "go," using existing data
+- "Phenotyping" using electronic health record (EHR) data
+
+
+
 
 # Example studies
+
+# Medicaid Expansion and Utilizatiton
 
 ## Patrick
 
@@ -28,6 +42,99 @@ About the study.[^pom]
 
 [^pom]: Patrick study *ref*
 
-## Kao
 
-end
+
+
+## Results
+
+
+
+
+# Kao
+
+## S1
+
+
+
+
+## S2
+
+
+
+
+# Murphy
+
+## measure of dx quality
+
+
+
+
+## method
+
+
+
+
+## result
+
+
+
+
+# Sheehan
+
+## slide
+
+
+
+
+## slide 2
+
+
+
+
+# EHR data
+
+## VA data overview
+
+- 20 million individuals
+- 2 billion outpatient visits[^fihn]
+- etc
+
+[^fihn]: Fihn *et al. Health Affairs* 33:1203 (2014)
+
+
+
+
+## "Just search" for your data
+
+sodium[^nate]
+
+[^nate]: Fillmore, N., *et al.* Interactive Machine Learning for
+Laboratory Data Integration. *Stud Health Technol* 264, 133--137.
+
+
+
+
+## "Just do"
+
+A1c
+
+
+
+
+## Statins
+
+confound by indication
+
+
+
+
+# Wrap up
+
+## Slide
+
+
+
+
+## Contact
+
+tk
