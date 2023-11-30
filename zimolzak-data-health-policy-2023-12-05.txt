@@ -1,7 +1,10 @@
-% Electronic health record data for (health policy) research
-% Andrew Zimolzak, MD, MMSc
-% December 5, 2023
-
+---
+title: Electronic health record data for (health policy) research
+author: Andrew Zimolzak, MD, MMSc
+date: December 5, 2023
+theme: Goettingen
+fonttheme: structurebold
+---
 
 
 
@@ -31,16 +34,48 @@ What is *Clinical research informatics?*
 
 
 
+## Much more about secondary use
+
+![](book.jpg){ height=50% }
+
+MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
+Springer Cham, 2016. [Free access](https://link.springer.com/book/10.1007/978-3-319-43742-2)
+
+
+
 
 # Example studies
+
+## How I (an informatics person) look at these studies
+
+- database type
+- whose data?
+- "pre" methods (how carefully did they do "phenotyping"?)
+- study type (broadly)
+- ...and oh yes, the details of "real" analysis methods and results
+
+
+
+
+## Studies we'll discuss
+
+1. Medicaid Expansion
+2. 
+
+
+
 
 # Medicaid Expansion and Utilizatiton
 
 ## Patrick
 
-About the study.[^pom]
+About the study.^[testing inline note]
 
-[^pom]: Patrick study *ref*
+O'Mahen PN, Petersen LA. Effects of State-level Medicaid Expansion on
+Veterans Health Administration Dual Enrollment and Utilization:
+Potential Implications for Future Coverage Expansions. Med Care.
+2020;58(6):526-533. <https://pubmed.ncbi.nlm.nih.gov/32205790/>
+
 
 
 
@@ -54,6 +89,11 @@ About the study.[^pom]
 
 ## S1
 
+Chua KP, Waljee JF, Smith MA, Bahl S, Nalliah RP, Brummett CM.
+Estimation of the Prevalence of Delayed Dispensing Among Opioid
+Prescriptions From US Surgeons and Dentists. JAMA Netw Open.
+2022;5(5):e2214311. <https://pubmed.ncbi.nlm.nih.gov/35622363/>
+
 
 
 
@@ -66,6 +106,7 @@ About the study.[^pom]
 
 ## measure of dx quality
 
+Murphy DR, Zimolzak AJ, Upadhyay DK, et al. Developing electronic clinical quality measures to assess the cancer diagnostic process. J Am Med Inform Assoc. 2023;30(9):1526-1531. <https://pubmed.ncbi.nlm.nih.gov/37257883/>
 
 
 
@@ -83,6 +124,7 @@ About the study.[^pom]
 
 ## slide
 
+Sheehan SE, Safdar N, Singh H, et al. Detection and Remediation of Misidentification Errors in Radiology Examination Ordering. Appl Clin Inform. 2020;11(1):79-87. <https://pubmed.ncbi.nlm.nih.gov/31995835/>
 
 
 
@@ -138,3 +180,11 @@ confound by indication
 ## Contact
 
 tk
+
+
+
+
+
+## misc consider
+
+- beamer Theme font: structurebold (fonttheme)
