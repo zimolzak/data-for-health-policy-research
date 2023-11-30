@@ -1,8 +1,11 @@
-% Habits
-% John Doe
-% March 22, 2005
+% Electronic health record data for (health policy) research
+% Andrew Zimolzak, MD, MMSc
+% December 5, 2023
 
-# In the morning
+---
+toc: true
+toc-title: Table of contents
+...
 
 ## Getting up
 
@@ -14,18 +17,20 @@
 - Eat eggs
 - Drink coffee
 
-# In the evening
+# This slide separates things
 
 ## Dinner
 
 - Eat spaghetti
 - Drink wine
 
-------------------
+## Slide
 
-![picture of spaghetti](spaghetti.jpg)
+What happens when there is no bullet?
 
-## Going to sleep
+## Title again
 
-- Get in bed
-- Count sheep
+Shannon entropy is like $S = \sum_i -log ((p_i)(1 - p_i))$, but that
+is like from memory and I think I got it wrong.
+
+- Probably should memorize.
