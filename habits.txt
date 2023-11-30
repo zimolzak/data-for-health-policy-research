@@ -12,11 +12,13 @@
 
 ## About me
 
-|Table | Again |
-|:-----|:------|
-| 123 |  456 |
+| Research                              | Clinical |
+|:---------------------------------------|:------------------------------|
+|                                          |  Internal medicine residency |
+| MMSc biomedical informatics                  | Outpatient urgent care |
+| Veterans Affairs Boston:  | Hospitalist |
+| VA Health services research | Hospitalist |
 
-: caption
 
 # Example studies
 
