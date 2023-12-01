@@ -9,7 +9,7 @@ colortheme: whale
 
 
 
-# Introduction
+# Intro, & research *about* policy
 
 ## About me
 
@@ -53,7 +53,7 @@ Springer Cham, 2016.
 
 
 
-# Medicaid expansion affects VA utilizatiton[^pom]
+# 1: Medicaid expansion affects VA utilizatiton[^pom]
 
 [^pom]: O'Mahen PN, Petersen LA. Effects of State-level Medicaid Expansion on
 Veterans Health Administration Dual Enrollment and Utilization:
@@ -94,7 +94,7 @@ several outcome variables derived from the EHR.
 
 
 
-# Measuring delayed opioid dispensing[^kao]
+# 2: Measuring delayed opioid dispensing[^kao]
 
 [^kao]: Chua KP, Waljee JF, Smith MA, Bahl S, Nalliah RP, Brummett CM.
 Estimation of the Prevalence of Delayed Dispensing Among Opioid
@@ -107,7 +107,7 @@ Prescriptions From US Surgeons and Dentists. *JAMA Netw Open.*
 ## Methods
 
 Delayed dispensing:
-: Dispensing $> 30$ days after writing: possibly used for unintended reasons/dates.
+: Dispensing > 30 days after writing: possibly used for unintended reasons/dates.
 
 ### Data
 
@@ -125,6 +125,13 @@ Delayed dispensing:
 
 
 
+
+## Technical
+
+$\mathbb{E}(Y_{ist}) = \beta_1 \mathsf{State}_s + \beta_2
+\mathsf{Month}_t + \beta_3 \mathsf{Minnesota}_{ist} \mathsf{Post}_{ist}$
+
+tk: move me to end?
 
 
 
@@ -146,7 +153,7 @@ tk
 
 
 
-# An electronic measure of diagnostic quality[^drm]
+# 3: An electronic measure of diagnostic quality[^drm]
 
 [^drm]: Murphy DR, Zimolzak AJ, Upadhyay DK, *et al.* Developing electronic clinical quality measures to assess the cancer diagnostic process. *J Am Med Inform Assoc.* 2023;30(9):1526--1531. <https://pubmed.ncbi.nlm.nih.gov/37257883/>
 
@@ -182,9 +189,12 @@ tk
 
 
 
-# Sheehan[^she]
+# 4: Detecting wrong-side imaging tests[^she]
 
-[^she]: Sheehan SE, Safdar N, Singh H, *et al.* Detection and Remediation of Misidentification Errors in Radiology Examination Ordering. *Appl Clin Inform.* 2020;11(1):7--87. <https://pubmed.ncbi.nlm.nih.gov/31995835/>
+[^she]: Sheehan SE, Safdar N, Singh H, *et al.* Detection and
+Remediation of Misidentification Errors in Radiology Examination
+Ordering. *Appl Clin Inform.* 2020;11(1):7--87.
+<https://pubmed.ncbi.nlm.nih.gov/31995835/>
 
 
 
@@ -212,6 +222,17 @@ tk
 
 tk
 
+
+
+## Results quote
+
+> These findings raise questions about the reliability of staff
+> adherence to departmental guidelines in faithful checklist
+> performance and spreadsheet completion, and again raise suspicion of
+> potential workarounds.
+
+- Consider: not "imperfect staff" but "imperfect policy?"
+- Or, avoid "blame game" altogether
 
 
 # Summary and advice
@@ -244,10 +265,10 @@ departmental* policy)
 
 
 
-## VA data overview
+## VA data overview[^fihn]
 
 - 20 million individuals
-- 2 billion outpatient visits[^fihn]
+- 2 billion outpatient visits
 - etc tk
 
 [^fihn]: Fihn *et al. Health Affairs* 33:1203 (2014)
@@ -278,6 +299,73 @@ confound by indication
 
 
 
+## Statin
+
+slide 2+ on this
+
+
+
+
+## It takes a long time
+
+- datathon example
+- know that datathon exists
+- Amgen example of phenotyping
+- actual manual chart review is a thing. Hard work; get *different aspects*
+
+
+## what's in EHR data
+
+- list
+
+Probably need assistance
+
+
+
+## EHR data $\ne$ EHR data
+
+### Data just among BCM affiliates
+
+- Baylor St.\ Luke's $\subset$ St.\ Luke's Health $\subset$ CommonSpirit
+- Baylor Clinic
+- Harris Health
+- TCH
+- DeBakey VA Med.\ Center $\subset$ VA
+
+
+
+
+
+
+
+# How policy *affects research*
+
+## actual hipaa
+
+- safe harbor
+
+
+
+## "Fancy anonymization"
+
+- Dwork
+
+
+
+## Getting access
+
+
+
+## Examples of deident EHR
+
+- mimic
+
+
+## Research data/code sharing
+
+- sadly uncommon
+
+
 
 
 ## Contact
@@ -287,6 +375,10 @@ tk
 Slides on github
 
 CCommons
+
+
+
+
 
 
 
