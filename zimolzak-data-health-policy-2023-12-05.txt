@@ -125,12 +125,6 @@ Delayed dispensing:
 
 
 
-## Technical
-
-$\mathbb{E}(Y_{ist}) = \beta_1 \mathsf{State}_s + \beta_2
-\mathsf{Month}_t + \beta_3 \mathsf{Minnesota}_{ist} \mathsf{Post}_{ist}$
-
-tk: move me to end?
 
 
 
@@ -250,10 +244,7 @@ tk
 
 
 
-# Summary and advice
-
-
-
+# Summary so far
 
 ## Summary of studies I presented
 
@@ -267,11 +258,11 @@ tk
 
 ### Electronic quality measure
 
-**Data:** EHR. **Question:** measure development and validation.
+**Data:** EHR + manual review. **Question:** measure development and validation.
 *But:* novel measure $\to$ a policy incentivizing improvements? Or:
 new policy $\to$ effect on this measure?
 
-### Sheehan
+### Wrong-side imaging
 
 **Data:** Internal spreadsheet + EHR. **Question:**  *local* policy $\to$ its
 intended effect. (Measuring staff adherence to an *existing
@@ -280,57 +271,27 @@ departmental* policy)
 
 
 
-## VA data overview[^fihn]
+# EHR data is hard
 
-- 20 million individuals
-- 2 billion outpatient visits
-- etc tk
-
-[^fihn]: Fihn *et al. Health Affairs* 33:1203 (2014)
-
-
-
-
-## "Just search" for your data
-
-sodium[^nate]
+## "Just search" for your data[^nate]
 
 [^nate]: Fillmore, N., *et al.* Interactive Machine Learning for
 Laboratory Data Integration. *Stud Health Technol* 264, 133--137.
 
-
-## probably 1 more slide
-
-- nate image
-
-
-
-## "Just do"
-
-A1c
-
-
-
-
-## Statins
-
-confound by indication
-
-
-
-## Statin
-
-slide 2+ on this
-
-
+![Here are hundreds of VA labs matching "sodium."](nate.png){ height=75% }
 
 
 ## It takes a long time
 
 - datathon example
 - know that datathon exists
-- Amgen example of phenotyping
-- actual manual chart review is a thing. Hard work; get *different aspects*
+- actual manual chart review is a thing. Hard work; get *different
+  aspects*
+
+
+## If you use EHR data, you have to define what you mean by *almost everything.*
+
+![](trialCriteria.png){ height=80% }
 
 
 ## what's in EHR data
@@ -340,10 +301,9 @@ slide 2+ on this
 Probably need assistance
 
 
-
 ## EHR data $\ne$ EHR data
 
-### Data just among Houston BCM affiliates
+### So many separate data sources just among Houston BCM affiliates
 
 - Baylor St.\ Luke's $\subset$ St.\ Luke's Health $\subset$ CommonSpirit
 - Baylor Clinic
@@ -360,9 +320,54 @@ Probably need assistance
 
 
 
-## Benefits of EHR data for research
 
-- lot of it
+# Pitfalls
+
+## Technical
+
+$\mathbb{E}(Y_{ist}) = \beta_1 \mathsf{State}_s + \beta_2
+\mathsf{Month}_t + \beta_3 \mathsf{Minnesota}_{ist} \mathsf{Post}_{ist}$
+
+The "actual" analysis[^chua] only comes after all the data preparation stages.
+
+
+## Pitfalls of observational databases: Statins cause heart attack?
+
+![](confound1.png)
+
+
+## Reality: Statins get prescribed for a reason.
+
+![](confound2.png)
+
+
+
+
+# Benefits of EHR
+
+## VA data overview[^fihn]
+
+- 20 million individuals
+- 2 billion outpatient visits
+- 11 million inpatient visits
+- 3.8 billion orders
+- 6.6 billion lab tests
+- 1.9 billion prescriptions
+- 2.7 billion vital signs
+- 2.6 billion notes
+
+1.5 PB storage
+
+1,000 database tables. 20,000 columns.
+
+126 M outpatient visits per year
+
+[^fihn]: Fihn *et al. Health Affairs* 33:1203 (2014)
+
+
+## Other benefits of EHR data for research
+
+- tk
 
 
 
@@ -372,19 +377,21 @@ Probably need assistance
 ## actual hipaa
 
 - safe harbor
+- ident
+- another
+- another
 
 45 CFR § 164.514
-¯
+
+This is only the HIPAA Privacy Rule definition. There are actually
+*more definitions!*[^maj]
+
+[^maj]: Majumder MA, Guerrini CJ, Bollinger JM, Cook-Deegan R, McGuire AL. Sharing data under the 21st Century Cures Act. *Genet Med.* 2017;19(12):1289.
 
 
 ## "Fancy anonymization"
 
 - Dwork
-
-
-
-## Getting access
-
 
 
 ## Examples of deident EHR
@@ -410,6 +417,15 @@ Probably need assistance
 :::
 
 
+## Getting access
+
+- Federal policies
+- Health care Organizational policies
+    - Which people are even allowed access?
+    - Where are the data allowed to go?
+- Academic institution policies
+
+
 ## Research data/code sharing
 
 - sadly uncommon
@@ -426,9 +442,18 @@ Probably need assistance
 - super broad
 - we've had AI for decades
 
-## stats vs ml
 
-hastie
+## Statistics vs.\ machine learning?
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+![This well-known book devotes 2 whole chapters (90 pp.) to logistic regression.](hastie.jpg)
+:::
+::: {.column width="50%"}
+![Andrew Ng thinks logistic is ML too.](ng.png)
+:::
+::::::::::::::
+
 
 ## choice quotes
 
@@ -437,16 +462,22 @@ hastie
 
 > dichotomy enables
 
-## Maarten 3/16
 
-> call it prediction model
+## Maarten van Smeden, 3/16/23
 
-## Maarten 6/21
+> Call it prediction model or logistic regression if you want to make clear a logit link function is used. If you want it published, call it ML.
 
-> the statistics vs machine
+
+## Maarten van Smeden, 6/21/21
+
+> The statistics vs machine learning debate could quickly be resolved
+> by using the **actual name of the model** used for a particular
+> application (e.g., logistic regression, XGboost) and collectively
+> call these approaches 'statistical learning,' but **where is the fun
+> in that?**
+
 
 ## What is ChatGPT really doing?[^wolf]
-
 
 "It’s just adding one word at a time."
 
@@ -462,11 +493,9 @@ February 14, 2023. [Link to stephenwolfram.com](https://writings.stephenwolfram.
 19,000-word article, but readable
 
 
+## Quotes about recent chat bots
 
-
-## Chat bots
-
-"Sutskever [chief OpenAI scientist] was shocked at the reaction to ChatGPT.  He noticed three main phenomena which disturbed him greatly."
+"Sutskever [OpenAI's chief scientist] was shocked at the reaction to ChatGPT.  He noticed three main phenomena which disturbed him greatly."
 
 1. A number of practising psychiatrists believed that ChatGPT could grow into an almost completely automatic form of psychotherapy.
 
@@ -475,29 +504,20 @@ February 14, 2023. [Link to stephenwolfram.com](https://writings.stephenwolfram.
 3. Some people believed that the program demonstrated a general solution to the problem of computer understanding of natural language.
 
 
+## WHOOPS---I lied! This describes a program from 1966, not 2022.[^acm]
 
-
-## WHOOPS, that was 1976, not 2022![^eliza]
-
-**Weizenbaum** was shocked at the reaction to **ELIZA.**  He noticed three main phenomena which disturbed him greatly.
+**Weizenbaum** was shocked at the reaction to **ELIZA.**  He noticed three main phenomena which disturbed him greatly.[^eliza]
 
 1. "A number of practising psychiatrists seriously believed the DOCTOR computer program could grow into a nearly completely automatic form of psychotherapy."
 
 2. "I was startled to see how quickly and how very deeply people coversing with DOCTOR became emotionally involved\ldots."
 
-3. "...a belief that it demonstrated a general solution to the problem of computer understanding of natural language."
+3. "...a belief that it demonstrated a general solution to the problem
+of computer understanding of natural language."
+
+[^acm]: Weizenbaum J. ELIZA---a computer program for the study of natural language communication between man and machine. *Commun ACM.* 1966;9(1):36--45.
 
 [^eliza]: Weizenbaum, J. 1976. *Computer Power & Human Reason.* W.H. Freeman & Co.
-
-
-
-
-
-
-
-
-
-
 
 
 ## Contact
