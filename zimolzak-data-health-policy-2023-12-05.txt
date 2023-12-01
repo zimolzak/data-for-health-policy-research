@@ -5,6 +5,7 @@ date: December 5, 2023
 theme: Goettingen
 fonttheme: structurebold
 colortheme: whale
+aspectratio: 169
 ---
 
 
@@ -324,7 +325,7 @@ Probably need assistance
 
 ## EHR data $\ne$ EHR data
 
-### Data just among BCM affiliates
+### Data just among Houston BCM affiliates
 
 - Baylor St.\ Luke's $\subset$ St.\ Luke's Health $\subset$ CommonSpirit
 - Baylor Clinic
@@ -332,6 +333,11 @@ Probably need assistance
 - TCH
 - DeBakey VA Med.\ Center $\subset$ VA
 
+### The problems
+
+- VA $\ne$ Epic
+- $\mathsf{Epic}_1 \ne \mathsf{Epic}_2$
+- $\mathsf{VA}_1 \ne \mathsf{VA}_2$ (yes, really)
 
 
 
@@ -364,6 +370,70 @@ Probably need assistance
 ## Research data/code sharing
 
 - sadly uncommon
+- journals have policies
+- NIH has policies
+
+
+
+
+# A bit about "AI"
+
+## definition
+
+- super broad
+- we've had AI for decades
+
+## stats vs ml
+
+hastie
+
+## choice quotes
+
+- "unfortunate trend"
+- "false dichotomy between statistics and ML"
+
+> dichotomy enables
+
+## Maarten 3/16
+
+> call it prediction model
+
+## Maarten 6/21
+
+> the statistics vs machine
+
+
+
+
+## Chat bots
+
+> Sutskever [chief OpenAI scientist] was shocked at the reaction to ChatGPT.  He noticed three main phenomena which disturbed him greatly
+
+> 1. A number of practising psychiatrists believed that ChatGPT could grow into an almost completely automatic form of psychotherapy.
+
+> 2. Users very quickly became emotionally involved---Sutskever's secretary demanded to be left alone with the program, for example.
+
+> 3. Some people believed that the program demonstrated a general solution to the problem of computer understanding of natural language.
+
+
+
+
+## Whoops, that was 1976, not 2022![^eliza]
+
+> Weizenbaum was shocked at the reaction to ELIZA.  He noticed three main phenomena which disturbed him greatly
+> 1. A number of practising psychiatrists believed that ELIZA could grow into an almost completely automatic form of psychotherapy.
+> 2. Users very quickly became emotionally involved—Weizenbaum's secretary demanded to be left alone with the program, for example.
+> 3. Some people believed that the program demonstrated a general solution to the problem of computer understanding of natural language.
+
+[^eliza]: Weizenbaum, J. 1976. *Computer Power & Human Reason.* W.H. Freeman & Co.
+
+
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,12 @@
+# from email
+
+how to conduct research on de-identified electronic health record data and secondary analysis. We are finding that students express interest in policy topics that require some retrospective chart review research and do not have in-house faculty who routinely conduct these analyses.
+
+
+
+# web site
+
+
 https://education.bcm.edu/SOM/ElectiveEnrollment/ElectiveProgram/DepartmentInfo/?Dept=MEETH&ElectiveType=3
 
 
