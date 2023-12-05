@@ -96,22 +96,22 @@ Prescriptions From US Surgeons and Dentists. *JAMA Netw Open.*
 
 ## Methods
 
-Delayed dispensing:
-: Dispensing > 30 days after writing: possibly used for unintended reasons/dates.
+Delayed dispensing (definition):
+: Dispensing > 30 days after writing. (Notable because Rx possibly used for unintended reasons/dates.)
 
 ### Data
 
-- deidentified prescription writing, fill date, *etc.* (not EHR)
+- Deidentified prescription writing, fill date, *etc.* (not EHR)
 - IQVIA Formulary Impact Analyzer ($\approx$ 63% of US Rx), 2014--2019
-- legal databases too (NABPLAW, Westlaw Edge)
-- pre methods tk
+- Legal databases: NABPLAW (specific to pharmacy), Westlaw Edge
+- Pre-analysis: opioids defined per list ($\approx$ 21) by IQVIA, specialty(?)
 
 ### Analytic
 
-- descriptive
-- difference-in-difference analysis
-- exposure: Change in Minnesota law, July 2019
-- endpoint: % of delayed opioid dispensing
+- Descriptive statistics (of laws)
+- Difference-in-difference analysis
+    - Exposure: Change in Minnesota law, July 2019
+    - Endpoint: % of delayed opioid dispensing
 
 
 ## Effect of change in policy
@@ -121,11 +121,13 @@ Delayed dispensing:
 
 ## Results
 
-- endpoint tk
+![Distribution of state laws (Schedule II drugs)](ChuaHisto.png){ height=50% }
 
 ### Bottom line
 
-tk
+Again, able to measure the **effect of a policy** on an outcome
+variable. In this case, not EHR data (could be done only in certain
+EHRs).
 
 
 
