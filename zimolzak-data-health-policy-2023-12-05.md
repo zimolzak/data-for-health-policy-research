@@ -35,7 +35,7 @@ What is *Clinical research informatics?*
 Springer Cham, 2016. [Click for free access](https://link.springer.com/book/10.1007/978-3-319-43742-2)
 
 
-## How I (an informatics person) look at these studies
+## How I (an informatics person) look at studies
 
 - Database type? (EHR or something else)
 - Whose data?
@@ -153,6 +153,8 @@ process. *J Am Med Inform Assoc.* 2023;30(9):1526--1531. [PMID
 ### Analytic
 
 - Largely descriptive statistics
+- Of those patients with an abnormal test, how many had follow-up
+  action within an appropriate time?
 
 
 ## Results
@@ -187,25 +189,29 @@ Ordering. *Appl Clin Inform.* 2020;11(1):7--87.
 
 ## Methods
 
+New policy: required radiology staff to complete a manual 9-point
+checklist before imaging (correct patient, correct exam, *etc.*). **If**
+there is a problem, then staff should record details into a
+spreadsheet.
+
 ### Data
 
-- database type tk
-- whose data
-- pre methods
+- EHR *plus* internal spreadsheet (plus chart review)
+- VA data. Madison, WI only. June 2015 -- May 2016.
+- Pre-analysis: extract side (left/right) from clinical history field of radiology order(?)
 
 ### Analytic
 
-- exposure:
-- endpoint: 
+- Descriptive
+- Of electronically detected errors, how many were recorded per policy?
 
 
 ## Results
 
-- endpoint
-
-### Bottom line
-
-tk
+- 18,006 orders should have anatomic side specified
+- 440 had discrepancy between modifier and history
+- 389 true positives (by manual review, mostly side not specified)
+- 116 had a spreadsheet entry per policy
 
 
 ## Results quote
@@ -217,6 +223,10 @@ tk
 
 - Consider: not "imperfect staff" but "imperfect policy?"
 - Or, avoid "blame game" altogether
+
+### Bottom line
+
+Another example of electronic monitoring of policy effect: this time **local** policy.
 
 
 ## Summary of studies I presented
@@ -238,7 +248,7 @@ new policy $\to$ effect on this measure?
 ### Wrong-side imaging
 
 **Data:** Internal spreadsheet + EHR. **Question:**  *local* policy $\to$ its
-intended effect. (Measuring staff adherence to an *existing
+intended effect. (Measuring rate of "wrong side," and reviewing staff adherence to an *existing
 departmental* policy)
 
 
@@ -370,22 +380,29 @@ $\mathbb{E}(Y_{ist}) = \beta_s + \beta_t + \beta_n [s = \mathsf{Minnesota}] \cdo
 
 # How policy *affects research*
 
-## actual HIPAA
+## One way to deem "not individually identifiable"[^HIPAA]
 
-- safe harbor
-- ident
-- another
-- another
+- Remove the following (emphasis mine):
 
-45 CFR § 164.514
+    - Names
+    - All geographic subdivisions **smaller than a State**, except for the initial three digits of a zip code if, \ldots
+    - **All** elements of dates **(except year)** for dates\ldots, except that\ldots
+    - Telephone numbers
+    - [13 other identifiers skipped]
+    - Any other unique identifying number, characteristic, or code
 
-This is only the HIPAA Privacy Rule definition. There are actually
-*more definitions!* [^Maj]
+- **and** you must not have actual knowledge that the information could be
+  used alone **or in combination with other information** to identify
+  an individual\ldots.
+
+This is only one definition. There are *many more!* [^Maj]
+
+[^HIPAA]: 45 CFR § 164.514, "HIPAA Privacy Rule"
 
 [^Maj]: Majumder MA, Guerrini CJ, Bollinger JM, Cook-Deegan R, McGuire AL. Sharing data under the 21st Century Cures Act. *Genet Med.* 2017;19(12):1289.
 
 
-## Adapting a meme from 2019, if I may
+## Adapting a (textual) meme from 2019, if I may
 
 ::: incremental
 
@@ -394,7 +411,7 @@ This is only the HIPAA Privacy Rule definition. There are actually
 - Me: \ldots
 - Armed robber: \ldots.
 - Me: \ldots.
-- Armed robber: It's easy to deidentify medical record data. Just remove all identifiers.
+- Armed robber: Just deidentify your medical record data. It's not that hard.
 - Me: WHAT, YOU DIDN'T EVEN CHOOSE A DEFINITION OF *IDENTIFIABLE!* CAN
   YOUR ANALYSIS HANDLE DATES WITH ONLY YEAR? CAN THE DATA BE USED IN
   COMBINATION WITH OTHER DATA FOR REIDENTIFICATION? HAVE YOU EVER
@@ -427,42 +444,51 @@ accessible critical care database. *Sci Data.* 2016;3:160035. [PMID
 - 8+ large databases. How? Using OMOP **common data model.**
 - {5 drug classes} $\times$ {5 drug classes} $\times$ {3 outcomes}, and more\ldots
 
-![ACE inhibitor vs. the other 4 classes, to prevent stroke.](legend.png){ height=60% }
+![ACE inhibitor vs. the other 4 classes, to prevent stroke.](legend.png){ height=40% }
 
 [^legend]: Schuemie MJ, *et al.* Large-scale evidence generation and
-evaluation across a network of databases (LEGEND): assessing validity
-using hypertension as a case study. *J Am Med Inform Assn.*
+evaluation across a network of databases (LEGEND). *J Am Med Inform Assn.*
 2020;27(8):1268--1277.
-
-
-## "Fancy anonymization"
-
-- Dwork tk
 
 
 ## Getting access
 
-- Federal policies
+- US Federal policies
 - Health care Organizational policies
     - Which people are even allowed access?
     - Where are the data allowed to go?
 - Academic institution policies
 
 
-## Research data/code sharing
+## Research data/code sharing: sadly uncommon, despite policies
 
-tk
+- Journals have policies.
 
-- sadly uncommon
-- journals have policies
-- NIH has policies
+- NIH has policies.
+
+- In a literature survey, 0 out of 194 oncology papers made analysis
+  scripts available.[^Walters]
+
+- Only a minority of papers that use code will archive it with the
+  journal. (And about half of those who claimed, "we don’t use code"
+  are incorrect, and simply "refused to submit their code.")[^Assel]
+
+- As we've seen, it's sometimes very hard to tell *exactly* how the
+  researchers went from EHR data to analysis!
+
+[^Assel]: Assel M, *et al.* Statistical code for clinical research
+papers in a high-impact specialist medical journal. *Ann Intern Med*
+2018;168:832--3
+
+[^Walters]: Walters *et al.* Do oncology researchers adhere to
+reproducible and transparent principles? *BMJ Open* 2019;9:e033962
 
 
 
 
 # A bit about "AI"
 
-## One definition (from Federal policy)
+## One definition (from US Federal policy)
 
 ![](defineAI.png){ height=70% }
 
@@ -575,7 +601,7 @@ artificial intelligence in healthcare. *NPJ Digit Med.* 2020;3:107.
 
 ## Thank you!
 
-### Contact me or review materials
+### Contact me or review materials:
 
 - zimolzak@bcm.edu
 
