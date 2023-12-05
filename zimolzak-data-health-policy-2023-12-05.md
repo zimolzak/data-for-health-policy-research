@@ -27,11 +27,11 @@ What is *Clinical research informatics?*
 - "Phenotyping" using electronic health record (EHR) data
 
 
-## A detailed reference about secondary use[^mit]
+## A detailed reference about secondary use[^MIT]
 
 ![](book.jpg){ height=75% }
 
-[^mit]: MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
+[^MIT]: MIT Critical Data. *Secondary Analysis of Electronic Health Records.*
 Springer Cham, 2016. [Click for free access](https://link.springer.com/book/10.1007/978-3-319-43742-2)
 
 
@@ -130,9 +130,9 @@ tk
 
 
 
-# 3: Electronic quality measure[^drm]
+# 3: Electronic quality measure[^DRM]
 
-[^drm]: Murphy DR, Zimolzak AJ, Upadhyay DK, *et al.* Developing
+[^DRM]: Murphy DR, Zimolzak AJ, Upadhyay DK, *et al.* Developing
 electronic clinical quality measures to assess the cancer diagnostic
 process. *J Am Med Inform Assoc.* 2023;30(9):1526--1531. [PMID
 37257883](https://pubmed.ncbi.nlm.nih.gov/37257883/)
@@ -305,9 +305,9 @@ All it knows is\ldots
 ![](trialCriteria.png){ height=80% }
 
 
-## "Just search" for your data[^nate]
+## "Just search" for your data[^Nate]
 
-[^nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine
+[^Nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine
 Learning for Laboratory Data Integration. *Stud Health Technol* 264,
 133--137.
 
@@ -371,7 +371,7 @@ $\mathbb{E}(Y_{ist}) = \beta_s + \beta_t + \beta_n [s = \mathsf{Minnesota}] \cdo
 
 # How policy *affects research*
 
-## actual hipaa
+## actual HIPAA
 
 - safe harbor
 - ident
@@ -381,9 +381,9 @@ $\mathbb{E}(Y_{ist}) = \beta_s + \beta_t + \beta_n [s = \mathsf{Minnesota}] \cdo
 45 CFR § 164.514
 
 This is only the HIPAA Privacy Rule definition. There are actually
-*more definitions!*[^maj]
+*more definitions!*[^Maj]
 
-[^maj]: Majumder MA, Guerrini CJ, Bollinger JM, Cook-Deegan R, McGuire AL. Sharing data under the 21st Century Cures Act. *Genet Med.* 2017;19(12):1289.
+[^Maj]: Majumder MA, Guerrini CJ, Bollinger JM, Cook-Deegan R, McGuire AL. Sharing data under the 21st Century Cures Act. *Genet Med.* 2017;19(12):1289.
 
 
 ## "Fancy anonymization"
@@ -511,18 +511,18 @@ February 14, 2023. [Link to stephenwolfram.com](https://writings.stephenwolfram.
 
 ## WHOOPS---I lied! This describes a program from 1966, not 2022.[^acm]
 
-**Weizenbaum** was shocked at the reaction to **ELIZA.**  He noticed three main phenomena which disturbed him greatly.[^eliza]
+**Weizenbaum** was shocked at the reaction to **ELIZA.**  He noticed three main phenomena which disturbed him greatly.[^Eliza]
 
 1. "A number of practising psychiatrists seriously believed the DOCTOR computer program could grow into a nearly completely automatic form of psychotherapy."
 
-2. "I was startled to see how quickly and how very deeply people coversing with DOCTOR became emotionally involved\ldots."
+2. "I was startled to see how quickly and how very deeply people conversing with DOCTOR became emotionally involved\ldots."
 
 3. "...a belief that it demonstrated a general solution to the problem
 of computer understanding of natural language."
 
 [^acm]: Weizenbaum J. ELIZA---a computer program for the study of natural language communication between man and machine. *Commun ACM.* 1966;9(1):36--45.
 
-[^eliza]: Weizenbaum, J. 1976. *Computer Power & Human Reason.* W.H. Freeman & Co.
+[^Eliza]: Weizenbaum, J. 1976. *Computer Power & Human Reason.* W.H. Freeman & Co.
 
 
 ## Can AI be used in medicine?
@@ -530,13 +530,13 @@ of computer understanding of natural language."
 - Yes, it already has been.
 - Yes, it can in the future.
     - at the bedside
-    - in processing EHR data for research[^nate]
+    - in processing EHR data for research[^Nate]
 - That doesn't mean it's *easy* to make it work!
-- Integration & implementation are key.[^npj] "Paste some stuff into a form in the browser" is
+- Integration & implementation are key.[^NPJ] "Paste some stuff into a form in the browser" is
   the current state of the art even for *basic calculations that are
   nowhere near AI!*
 
-[^npj]: Li RC, Asch SM, Shah NH. Developing a delivery science for
+[^NPJ]: Li RC, Asch SM, Shah NH. Developing a delivery science for
 artificial intelligence in healthcare. *NPJ Digit Med.* 2020;3:107.
 
 
