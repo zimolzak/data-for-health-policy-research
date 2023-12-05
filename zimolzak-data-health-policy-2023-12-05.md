@@ -58,22 +58,25 @@ Potential Implications for Future Coverage Expansions. *Med Care.*
 
 ### Data
 
-- EHR (plus)
+- EHR plus Medicaid Analytic eXtract
 - VA & Medicaid, 1999--2006
-- pre methods tk
+- States: {NY+, PA-}, {AZ+, NM-, NV-}.
+- Pre-analysis definitions of: dual enrollment, calendar days with visits, "disease burden," income(?)
 
 ### Analytic
 
-- difference-in-difference analysis
-- exposure: Medicaid expansion (NY and AZ in 2001)
-- endpoints: dual enrollment, hospital admissions, ED visits
+- Difference-in-difference analysis
+- Exposure: Medicaid expansion (NY and AZ in 2001)
+- Endpoints: dual enrollment, hospital admissions (per capita), ED visits (per capita)
 
 
-## Results
+## Results: After Medicaid expansion, \ldots
 
-- dual enroll tk
-- hospital admit tk
-- ED visits tk
+![](patrick1.png){ height=40% }
+
+- Dual enrollment *increases.*
+- VA share of hospital admits *decreases* (2--5 % points), and ER visits *decrease* (5--12 % points)
+- Total hospital admits increase or equal, and ER visits + or - or =.
 
 ### Bottom line
 
@@ -209,10 +212,6 @@ tk
 - Or, avoid "blame game" altogether
 
 
-
-
-# Summary so far
-
 ## Summary of studies I presented
 
 ### Medicaid expansion
@@ -238,7 +237,7 @@ departmental* policy)
 
 
 
-# EHR data is hard
+# Pros/cons of EHR data for research
 
 ## What's in EHR data?
 
@@ -259,6 +258,26 @@ departmental* policy)
     - etc.
 
 Probably need assistance!
+
+
+## VA data overview[^fihn]
+
+- 20 million individuals
+- 2 billion outpatient visits
+- 11 million inpatient visits
+- 3.8 billion orders
+- 6.6 billion lab tests
+- 1.9 billion prescriptions
+- 2.7 billion vital signs
+- 2.6 billion notes
+
+1.5 PB storage
+
+1,000 database tables. 20,000 columns.
+
+126 M outpatient visits per year
+
+[^fihn]: Fihn *et al. Health Affairs* 33:1203 (2014)
 
 
 ## The system doesn't know "who has diabetes."
@@ -330,7 +349,12 @@ Learning for Laboratory Data Integration. *Stud Health Technol* 264,
 $\mathbb{E}(Y_{ist}) = \beta_1 \mathsf{State}_s + \beta_2
 \mathsf{Month}_t + \beta_3 \mathsf{Minnesota}_{ist} \mathsf{Post}_{ist}$
 
-The "actual" analysis[^kao] only comes after all the data preparation stages.
+Or maybe more like:
+
+$\mathbb{E}(Y_{ist}) = \beta_s + \beta_t + \beta_n [s = \mathsf{Minnesota}] \cdot [t \in \mathsf{Post}]$
+
+- The "actual" analysis[^kao] only comes after all the data preparation stages.
+- When is it "right" to use difference-in-difference vs.\ something else?
 
 
 ## Pitfalls of observational databases: Statins cause heart attack?
@@ -341,35 +365,6 @@ The "actual" analysis[^kao] only comes after all the data preparation stages.
 ## Reality: Statins get prescribed for a reason.
 
 ![](confound2.png)
-
-
-
-
-# Benefits of EHR Data for Research
-
-## VA data overview[^fihn]
-
-- 20 million individuals
-- 2 billion outpatient visits
-- 11 million inpatient visits
-- 3.8 billion orders
-- 6.6 billion lab tests
-- 1.9 billion prescriptions
-- 2.7 billion vital signs
-- 2.6 billion notes
-
-1.5 PB storage
-
-1,000 database tables. 20,000 columns.
-
-126 M outpatient visits per year
-
-[^fihn]: Fihn *et al. Health Affairs* 33:1203 (2014)
-
-
-## Other benefits of EHR data for research
-
-- tk
 
 
 
@@ -399,6 +394,11 @@ This is only the HIPAA Privacy Rule definition. There are actually
 ## Examples of deident EHR
 
 - mimic
+
+
+## Research done with merged EHR data and common data model
+
+- LEGEND
 
 
 ## Adapting a meme from 2019, if I may
@@ -549,3 +549,5 @@ artificial intelligence in healthcare. *NPJ Digit Med.* 2020;3:107.
 - Source for this talk--- <https://github.com/zimolzak/data-for-health-policy-research>
 
 - This work © 2023 by Andrew Zimolzak is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+- Cite using doi:10.5281/zenodo.10262627
