@@ -19,7 +19,7 @@ aspectratio: 169
 | 3+1 | n/a                                 |  Internal medicine residency |
 | 2+1 | MMSc biomedical informatics         | Outpatient urgent care |
 | 4   | VA Boston: Clinical trials           | Hospitalist |
-| 5   | VA Houston: Health services research | Hospitalist |
+| 5   | BCM & VA Houston: Health services research | Hospitalist |
 
 What is *Clinical research informatics?*
 
@@ -37,10 +37,10 @@ Springer Cham, 2016. [Click for free access](https://link.springer.com/book/10.1
 
 ## How I (an informatics person) look at these studies
 
-- database type
-- whose data?
-- "pre" methods (how carefully did they do "phenotyping"?)
-- study type (broadly)
+- Database type? (EHR or something else)
+- Whose data?
+- "Pre" methods (how carefully did they do "phenotyping"?)
+- Study type (broadly)
 - ...and oh yes, the details of "real" analysis methods and results
 
 
@@ -104,22 +104,23 @@ Delayed dispensing (definition):
 - Deidentified prescription writing, fill date, *etc.* (not EHR)
 - IQVIA Formulary Impact Analyzer ($\approx$ 63% of US Rx), 2014--2019
 - Legal databases: NABPLAW (specific to pharmacy), Westlaw Edge
-- Pre-analysis: opioids defined per list ($\approx$ 21) by IQVIA, specialty(?)
+- Pre-analysis: opioids defined per list ($\approx$ 21) by IQVIA,
+  specialty(?), dichotomized at 30 days
 
 ### Analytic
 
 - Descriptive statistics (of laws)
 - Difference-in-difference analysis
-    - Exposure: Change in Minnesota law, July 2019
+    - Exposure: Change in Minnesota law, July 2019 (30-day limit)
     - Endpoint: % of delayed opioid dispensing
 
 
-## Effect of change in policy
+## Results: effect of change in policy
 
 ![Minnesota $0.55 \to 0.13$%, *vs.* controls $1.12 \to 0.97$](kao-graph.jpg){ height=75% }
 
 
-## Results
+## Results (descriptive)
 
 ![Distribution of state laws (Schedule II drugs)](ChuaHisto.png){ height=50% }
 
@@ -144,29 +145,34 @@ process. *J Am Med Inform Assoc.* 2023;30(9):1526--1531. [PMID
 
 ### Data
 
-- database type tk
-- whose data tk
-- pre methods tk
+- EHR *plus* manual chart review
+- VA and Geisinger, 2019
+- Pre-analysis: multiple blood tests, stool tests, imaging tests (and
+  definitions of abnormalities based on lab value cutoffs). Certain follow-up actions.
 
 ### Analytic
 
-- tk
-- exposure: tk
-- endpoint: 
-
-
-## Focus on manual chart review aspects
-
-tk
+- Largely descriptive statistics
 
 
 ## Results
 
-- endpoint tk
+|                    | VA colon | VA lung | Geisinger colon |
+|--------------------|----------|---------|-----------------|
+| *N* abnormal       | 74,314   | 40,924  | 2461            |
+| *N* with follow-up | 26,783   | 25,166  | 1009 |
+| Measure (%)        | 36.0     | 61.5    | 41.0 |
+| Missed opportunity (%) | 70   | 27      | 60   |
 
 ### Bottom line
 
-tk
+Created and validated a new EHR-based measure that:
+
+a. future policy could use to promote quality (*e.g.,* creating an
+   incentive payment for higher measure numbers), or
+
+b. could be used to monitor the effect of a policy (retrospective or
+   prospective)
 
 
 
@@ -184,19 +190,18 @@ Ordering. *Appl Clin Inform.* 2020;11(1):7--87.
 ### Data
 
 - database type tk
-- whose data tk
-- pre methods tk
+- whose data
+- pre methods
 
 ### Analytic
 
-- tk
-- exposure: tk
+- exposure:
 - endpoint: 
 
 
 ## Results
 
-- endpoint tk
+- endpoint
 
 ### Bottom line
 
@@ -245,10 +250,10 @@ departmental* policy)
 
 - Demographics
 - Visit dates and associated diagnoses
-- Medication orders
+- Orders (labs, imaging, medications, *etc.*)
 - Procedure codes (not only "invasive" procedures)
 - Vital signs
-- Labs
+- Lab results (numeric)
 - "Special" structured data
 - Lots of notes
     - nurses
@@ -257,7 +262,7 @@ departmental* policy)
     - pathology
     - physical & occupational therapy
     - social worker
-    - etc.
+    - *etc.*
 
 Probably need assistance!
 
@@ -307,21 +312,13 @@ All it knows is\ldots
 ![](trialCriteria.png){ height=80% }
 
 
-## "Just search" for your data[^Nate]
+## Can't you "just search" for your data?[^Nate]
 
 [^Nate]: Fillmore N, Do N, Brophy M, Zimolzak A. Interactive Machine
 Learning for Laboratory Data Integration. *Stud Health Technol* 264,
 133--137.
 
 ![Here are a few of the 100s of VA labs matching "sodium."](nate.png){ height=66% }
-
-
-## It takes a long time
-
-- datathon example
-- know that datathon exists
-- actual manual chart review is a thing. Hard work; get *different
-  aspects*
 
 
 ## EHR data $\ne$ EHR data
@@ -344,7 +341,7 @@ Learning for Laboratory Data Integration. *Stud Health Technol* 264,
 
 
 
-# Analytic Pitfalls
+# Analytic pitfalls
 
 ## Technical
 
@@ -383,24 +380,9 @@ $\mathbb{E}(Y_{ist}) = \beta_s + \beta_t + \beta_n [s = \mathsf{Minnesota}] \cdo
 45 CFR § 164.514
 
 This is only the HIPAA Privacy Rule definition. There are actually
-*more definitions!*[^Maj]
+*more definitions!* [^Maj]
 
 [^Maj]: Majumder MA, Guerrini CJ, Bollinger JM, Cook-Deegan R, McGuire AL. Sharing data under the 21st Century Cures Act. *Genet Med.* 2017;19(12):1289.
-
-
-## "Fancy anonymization"
-
-- Dwork
-
-
-## Examples of deident EHR
-
-- mimic
-
-
-## Research done with merged EHR data and common data model
-
-- LEGEND
 
 
 ## Adapting a meme from 2019, if I may
@@ -421,6 +403,43 @@ This is only the HIPAA Privacy Rule definition. There are actually
 :::
 
 
+## Example of a deidentified EHR database[^mimic]
+
+MIMIC-III
+
+- $n \approx$ 40,000
+- All patients had a stay in ICU
+- Single medical center
+- Must have human subjects training and sign data use agreement. Other than that, it's free!
+- Download and learn how to set up a database server, or pay and use on cloud.
+- <https://mimic.mit.edu/>
+- <https://physionet.org/content/mimiciii/1.4/>
+- There is a [small subset of data linked here](https://physionet.org/content/mimiciii-demo/1.4/), which literally anyone can download.
+
+[^mimic]: Johnson AE, Pollard TJ, Shen L, *et al.* MIMIC-III, a freely
+accessible critical care database. *Sci Data.* 2016;3:160035. [PMID
+27219127](https://pubmed.ncbi.nlm.nih.gov/27219127/)
+
+
+## Research done with merged EHR data and common data model[^legend]
+
+- $N =$ 21.6 million patients newly started on meds.
+- 8+ large databases. How? Using OMOP **common data model.**
+- {5 drug classes} $\times$ {5 drug classes} $\times$ {3 outcomes}, and more\ldots
+
+![ACE inhibitor vs. the other 4 classes, to prevent stroke.](legend.png){ height=60% }
+
+[^legend]: Schuemie MJ, *et al.* Large-scale evidence generation and
+evaluation across a network of databases (LEGEND): assessing validity
+using hypertension as a case study. *J Am Med Inform Assn.*
+2020;27(8):1268--1277.
+
+
+## "Fancy anonymization"
+
+- Dwork tk
+
+
 ## Getting access
 
 - Federal policies
@@ -432,6 +451,8 @@ This is only the HIPAA Privacy Rule definition. There are actually
 
 ## Research data/code sharing
 
+tk
+
 - sadly uncommon
 - journals have policies
 - NIH has policies
@@ -441,7 +462,7 @@ This is only the HIPAA Privacy Rule definition. There are actually
 
 # A bit about "AI"
 
-## One definition
+## One definition (from Federal policy)
 
 ![](defineAI.png){ height=70% }
 
@@ -461,15 +482,25 @@ This is only the HIPAA Privacy Rule definition. There are actually
 ::::::::::::::
 
 
-## choice quotes
+## Choice quotes on stats vs. ML[^Finlayson]
 
-- "unfortunate trend"
-- "false dichotomy between statistics and ML"
+- "An unfortunate trend has emerged\ldots of emphasizing a false
+  dichotomy between statistics and machine learning\ldots."
 
-> dichotomy enables
+- ML is framed "as a drop-in alternative to... statistics. This
+  betrays a limited understanding" of ML, which "was codeveloped with
+  and is inseparable from modern statistics."
+
+- "[T]he dichotomy enables using specific methods to **brand** an
+  analysis as ML, which in turn may be conflated with innovation or
+  technical sophistication; this incentivizes some authors or
+  reviewers to favor so-called machine learning methods even if they
+  are not best suited for the analysis at hand."
+
+[^Finlayson]: Finlayson *et al. JAMA Pediatr* 177, 448--450 (2023).
 
 
-## Maarten van Smeden
+## Quotes from Maarten van Smeden (statistician & prediction model expert)
 
 ### 6/21/21
 
@@ -534,9 +565,9 @@ of computer understanding of natural language."
     - at the bedside
     - in processing EHR data for research[^Nate]
 - That doesn't mean it's *easy* to make it work!
-- Integration & implementation are key.[^NPJ] "Paste some stuff into a form in the browser" is
-  the current state of the art even for *basic calculations that are
-  nowhere near AI!*
+- Integration & implementation are key.[^NPJ] "Paste some stuff into a
+  form in the browser" is the current state of the art even for *basic
+  calculations that are nowhere near AI!*
 
 [^NPJ]: Li RC, Asch SM, Shah NH. Developing a delivery science for
 artificial intelligence in healthcare. *NPJ Digit Med.* 2020;3:107.
