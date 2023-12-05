@@ -2,8 +2,8 @@
 
 all: zimolzak-data-health-policy-2023-12-05.pdf zimolzak-data-health-policy-2023-12-05.pptx
 
-%.pdf: %.txt
+%.pdf: %.md
 	pandoc -t beamer -H fix.tex $< -o $@
 
-%.pptx: %.txt
+%.pptx: %.md
 	pandoc $< -o $@
